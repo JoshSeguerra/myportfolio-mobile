@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", system-ui;
+    font-optical-sizing: auto;
+    
+    
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Start Animations*/
+
+/*End Animations*/
+/*
+-- Start BackGround Animation 
+*/
+
+/*
+-- End BackGround Animation 
+*/
+
+
+@keyframes background {
+    0%{
+        border-top-left-radius: 40%;
+    }
+    60%{
+        border-bottom-left-radius: 40%;
+    }
+    25%{
+        border-top-right-radius: 35%;
+    }
+    100%{
+        border-bottom-right-radius: 40%;
+    }
+
+    
+}
+
+@keyframes updown {
+    0%{
+        transform: translateY(10px);
+    }
+    
+}
+
+header{
+	z-index: 10;
+    position: fixed;
+}
+body{
+    overflow-x: hidden;
+	height: 100svh;
+	margin-bottom: 1000px;
+	background-image: linear-gradient(to left bottom, #000000, #130007, #1d0011, #23001b, #260025, #270024, #280024, #290023, #260018, #21000e, #190004, #0b0000);
+}
+.animated:after {
+	content: '';
+	position: absolute;
+	top: 10;
+	left: -30;
+	border-radius: 50%;
+	width: 130%;
+	height: 100%;
+	background-image: linear-gradient(to left bottom, #454346, #403744, #3a2c41, #34203e, #2e143b, #2f0e36, #300630, #30002a, #340021, #350018, #34000e, #320202);
+	animation: background 15s alternate-reverse infinite;
+	z-index: -1;
+	/* Additional styling for the pseudo-element */
+}
+.navLinks:hover{
+	background-color: gray;
+}
+  .wlc-img{
+	z-index: -19;
+	animation: updown 2s alternate-reverse infinite;
+}
+.input-container #message:focus{
+    background-color: white;
+    place-content: none;
+    color:black;
+}
+.input-container #name:focus{
+    background-color: white;
+    place-content: none;
+    color:black;
+}
+.input-container #email:focus{
+    background-color: white;
+    place-content: none;
+    color:black;
+}
+
+.fly-man{
+animation: rotate 5s alternate-reverse infinite;
+}
+.image-fly{
+    transition: 0.7s;
+    position: absolute;
+    right:0;
+    top:500;
+    height: 120px;
+    z-index: 1;
+    opacity: 0.8;
+    
+}
+.rocket{
+	animation: moving 10s reverse infinite;
+    right:-100
+}
+.main-list-link{
+color:white;
+}
+.list-link {
+display: none;
+color:white;
+ 
+}
+  .list-link.active {
+    display: block;
+}
+
+.flex{
+	display: flex;
+}
+
+.sidebar{
+	display: none;
+}
+
+
+@keyframes rotate {
+    0%{
+        transform: rotate(30deg) scale(1.1);
+    }
+    100%{
+		transform: rotate(-30deg) scale(1.1);
+	}
+}
+@keyframes moving {
+    0%{
+        transform: translateX(-600px);
+    }
+  
+    
+    
+}
